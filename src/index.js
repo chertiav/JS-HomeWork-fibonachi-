@@ -1,17 +1,16 @@
 const calculation = (i) => {
-    let a=1, b=1, sum=0, j=0;
-    while (j<i-2) {
-        sum=a+b;
-        a=b;
-        b=sum;
+    let a=0, b=1, j=0;
+    while (j<i) {
+        a=a+b;
+        b=a-b;
         j++;
     } 
-    return sum
+    return a;
 };
-const fibo = Number (prompt('Введите положительное число больше 0'));
+const fibo = Number (prompt('Введите число от 0 и больше:'));
 
-if (isNaN(fibo) || fibo<=0){
-    console.log('Вы ввели не чило, либо чило равное или больше 0')
+if (isNaN(fibo) || fibo<0){
+    console.log('Вы ввели не число, или число меньше 0')
 } else {
     console.log(calculation(fibo));
 }
