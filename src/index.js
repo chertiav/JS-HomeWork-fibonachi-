@@ -1,4 +1,13 @@
-const calculation = (i) => {return i+i-1};
+const calculation = (i) => {
+    let a=1, b=1, sum=0, j=0;
+    while (j<i-2) {
+        sum=a+b;
+        a=b;
+        b=sum;
+        j++;
+    } 
+    return sum
+};
 const fibo = Number (prompt('Введите положительное число больше 0'));
 
 if (isNaN(fibo) || fibo<=0){
